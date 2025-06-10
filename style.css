@@ -1,0 +1,98 @@
+body {
+  font-family: 'Prompt', sans-serif;
+  background: #fffafc;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+header {
+  background: #fcd1e3;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+  color: #d63384;
+}
+
+section {
+  padding: 30px 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+h2 {
+  color: #d63384;
+}
+
+footer {
+  background: #ffd6e8;
+  text-align: center;
+  padding: 10px;
+}
+img {
+  display: block;
+  margin: 0 auto 20px;
+  max-width: 100%;
+  height: auto;
+}
+.service-img {
+  width: 100%;
+  max-width: 400px;
+  display: block;
+  margin: 0 auto 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+/* --- รูปข้างกัน --- */
+.image-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.review-img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  aspect-ratio: 1/1; /* ทำให้เป็นรูปสี่เหลี่ยมจัตุรัส */
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* --- รูปสไลด์ --- */
+.slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 20px;
+  padding: 10px 0;
+  scroll-behavior: smooth;
+}
+
+.slide-img {
+  width: 100%;
+  max-width: 280px;
+  aspect-ratio: 4/3; /* หรือ 1/1 ถ้าอยากเป็นจัตุรัส */
+  object-fit: cover;
+  flex: 0 0 auto;
+  border-radius: 10px;
+  scroll-snap-align: start;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+@media (max-width: 768px) {
+  .review-img {
+    max-width: 45%;
+  }
+
+  .slide-img {
+    max-width: 90%;
+  }
+}
